@@ -134,8 +134,11 @@ section .sub{color:var(--gris);font-size:.88rem;margin:7px 0 16px}
 .kv li:last-child{border-bottom:0}
 .kv b{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;
   color:var(--gris);margin-bottom:2px}
-.scheme{margin-top:13px;border:1px solid var(--linia);border-radius:var(--r);
+.photo{margin:13px 0 0;border:1px solid var(--linia);border-radius:var(--r);
   overflow:hidden;background:#fff;box-shadow:var(--ombra)}
+.photo img{width:100%;height:auto;display:block}
+.photo figcaption{padding:9px 13px;font-size:.78rem;color:var(--gris);
+  border-top:1px solid var(--linia)}
 
 footer{background:var(--negre);color:#a7a4ae;margin-top:34px;padding:24px 16px 30px;
   font-size:.83rem;border-top:3px solid var(--vermell)}
@@ -180,7 +183,7 @@ footer .fl img{height:28px;width:auto}
       i què veure a Torelló.</p>
     <div class="facts">
       <div class="full"><b>Dissabte 16 de gener de 2027</b>Data de la competició</div>
-      <div><b>Pavelló Municipal</b>Passatge dels Esports, s/n</div>
+      <div><b>Pavelló Municipal i Sala Polivalent</b>Zona Esportiva Municipal</div>
       <div><b>Mini Interterritorial</b>Masculí i femení</div>
     </div>
   </div>
@@ -209,7 +212,7 @@ footer .fl img{height:28px;width:auto}
     <ul>
       <li>Mini masculí — per confirmar</li>
       <li>Mini femení — per confirmar</li>
-      <li>Pista i franges — per confirmar</li>
+      <li>Repartiment entre Pavelló i Sala Polivalent — per confirmar</li>
     </ul>
   </div>
   <ol class="slots">
@@ -223,24 +226,42 @@ footer .fl img{height:28px;width:auto}
 
 <section id="camp">
   <h2>Camp de joc</h2>
-  <p class="sub">On es juga tota la jornada.</p>
+  <p class="sub">L'Open Day es juga en <b>dues instal·lacions</b> de la zona esportiva municipal de Torelló, a tocar l'una de l'altra.</p>
   <article class="item">
     <div class="item-body">
+      <span class="pill">Coberta blava</span>
       <h3>Pavelló Municipal de Torelló</h3>
       <ul class="kv">
         <li><b>Adreça</b>Passatge dels Esports, s/n · 08570 Torelló (Osona)</li>
-        <li><b>Telèfon</b>938 593 200</li>
-        <li><b>Instal·lacions</b>Pista poliesportiva, gimnàs, pista d'esquaix i zona de búlder</li>
+        <li><b>Pista</b>Pista poliesportiva coberta, amb gimnàs, pista d'esquaix i zona de búlder</li>
         <li><b>Com arribar-hi</b>C-17 (sortida Torelló Nord) o C-25 amb connexió a la C-17 a Vic</li>
       </ul>
     </div>
     <div class="item-actions">
       <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Pavell%C3%B3+Municipal+de+Torell%C3%B3%2C+Passatge+dels+Esports+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
       <a class="btn" href="tel:+34938593200">Trucar</a>
-      <a class="btn ghost" href="https://equipamentstorello.cat/" target="_blank" rel="noopener">Equipaments</a>
     </div>
   </article>
-  <div class="scheme"><img src="img/pavello.svg" alt="Esquema d'accés al Pavelló Municipal" loading="lazy" width="600" height="420"></div>
+  <article class="item">
+    <div class="item-body">
+      <span class="pill">Coberta verda</span>
+      <h3>Sala Polivalent</h3>
+      <ul class="kv">
+        <li><b>Adreça</b>Zona Esportiva Municipal · Passatge dels Esports, s/n · 08570 Torelló</li>
+        <li><b>Pista</b>Espai polivalent cobert, a la mateixa zona esportiva que el Pavelló</li>
+        <li><b>Com arribar-hi</b>Accés pel mateix recinte; als aparcaments de la zona esportiva</li>
+      </ul>
+    </div>
+    <div class="item-actions">
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Zona+Esportiva+Municipal+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+      <a class="btn" href="tel:+34938593200">Trucar</a>
+    </div>
+  </article>
+  <p class="muted" style="margin:0 0 13px">Els partits es reparteixen entre les dues instal·lacions. Ambdues són dins la Zona Esportiva Municipal, a tocar l'una de l'altra — <a href="https://equipamentstorello.cat/" target="_blank" rel="noopener">informació d'equipaments esportius</a>.</p>
+  <figure class="photo">
+    <img src="img/instalacions.jpg" alt="Vista aèria de la zona esportiva municipal de Torelló, amb el Pavelló Municipal" loading="lazy" width="1600" height="1200">
+    <figcaption>Zona esportiva municipal de Torelló.<br><b>Coberta blava:</b> Pavelló Municipal.<br><b>Coberta verda:</b> Sala Polivalent.<br>L'Open Day es juga a les <b>dues</b> instal·lacions.</figcaption>
+  </figure>
 </section>
 
 <section id="restaurants">
