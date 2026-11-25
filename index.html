@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111013">
+<meta name="description" content="Open Day 2027 del CB Torelló. Campionat de Catalunya Mini Masculí i Femení Interterritorial, dissabte 16 de gener de 2027 a la Zona Esportiva Municipal de Torelló.">
+<title>Open Day 2027 · Campionat de Catalunya · CB Torelló</title>
+<style>
+:root{
+  --vermell:#c8102e; --vermell-fosc:#8d0a20; --vermell-clar:#fdecef;
+  --negre:#111013; --negre-suau:#1b1a1f; --carn:#3d3a42;
+  --tinta:#17161a; --gris:#6b6870; --linia:#e6e3e8; --fons:#f7f6f8;
+  --ombra:0 1px 3px rgba(17,16,19,.07), 0 6px 18px rgba(17,16,19,.06);
+  --r:14px; --nav-h:56px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--tinta);background:var(--fons);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  padding-bottom:72px;overflow-x:hidden}
+h1,h2,h3{margin:0;line-height:1.2;letter-spacing:-.01em}
+a{color:var(--vermell)}
+img{max-width:100%;display:block}
+
+/* ---------- Portada ---------- */
+#portada{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:0;padding:28px 22px;
+  background:radial-gradient(circle at 50% 38%,#2a0a11 0%,#111013 55%,#000 100%);
+  text-align:center;transition:opacity .35s ease,visibility .35s ease}
+#portada.amagat{opacity:0;visibility:hidden;pointer-events:none}
+#portada img.logo{width:min(80vw,360px);height:auto;max-height:50vh;object-fit:contain;
+  margin-bottom:20px;animation:entra .7s cubic-bezier(.2,.8,.3,1) both}
+@keyframes entra{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:scale(1)}}
+#portada .pt{font-size:clamp(.95rem,4.2vw,1.15rem);font-weight:800;color:#fff;
+  letter-spacing:.1em;text-transform:uppercase;margin:0 0 4px}
+#portada .pd{font-size:.82rem;color:#b9b6bf;margin:0 0 4px;letter-spacing:.04em}
+#portada .pc{font-size:.78rem;color:#8a8792;margin:0 0 26px}
+#portada .entrar{display:inline-flex;align-items:center;gap:10px;
+  background:var(--vermell);color:#fff;border:0;border-radius:999px;
+  padding:15px 38px;font:inherit;font-size:1rem;font-weight:800;letter-spacing:.02em;
+  cursor:pointer;box-shadow:0 6px 22px rgba(200,16,46,.45)}
+#portada .entrar:active{transform:scale(.96)}
+#portada .entrar svg{width:18px;height:18px}
+#portada .pl{display:flex;gap:16px;align-items:center;background:#fff;
+  border-radius:11px;padding:9px 14px;margin-top:30px}
+#portada .pl img{height:26px;width:auto;object-fit:contain}
+#portada .pl img.f{height:22px}
+
+/* ---------- Capçalera ---------- */
+header{background:linear-gradient(165deg,#000 0%,var(--negre-suau) 60%,#2a0a11 100%);
+  color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 18px;
+  border-bottom:3px solid var(--vermell)}
+.hwrap{max-width:680px;margin:0 auto}
+.logos{display:flex;align-items:center;gap:14px;background:#fff;border-radius:12px;
+  padding:10px 14px;margin-bottom:16px}
+.logos img{height:34px;width:auto;object-fit:contain}
+.logos .fbq{height:30px;margin-left:auto}
+header .kicker{font-size:.72rem;font-weight:600;color:#fff;opacity:.83;
+  letter-spacing:.13em;text-transform:uppercase;margin:0 0 6px;line-height:1.5}
+header h1{font-size:clamp(2.1rem,11vw,3.1rem);font-weight:800;color:var(--vermell);
+  letter-spacing:-.03em;margin:0}
+header .sub2{font-size:.82rem;font-weight:700;color:#fff;opacity:.9;
+  letter-spacing:.14em;text-transform:uppercase;margin:6px 0 0}
+header .lead{color:#c9c6cd;font-size:.92rem;margin:10px 0 16px;max-width:52ch}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.facts div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;padding:9px 11px;font-size:.74rem;color:#b9b6bf;line-height:1.35}
+.facts b{display:block;color:#fff;font-size:.86rem;margin-bottom:2px}
+.facts .full{grid-column:1/-1;border-color:rgba(200,16,46,.5);background:rgba(200,16,46,.14)}
+
+/* ---------- Cercador ---------- */
+.search{position:sticky;top:0;z-index:40;background:var(--negre);
+  padding:9px 16px calc(9px + env(safe-area-inset-bottom,0px));padding-bottom:9px}
+.search .in{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:9px;
+  background:#2a282f;border:1px solid #3a373f;border-radius:11px;padding:0 12px}
+.search svg{flex:0 0 17px;opacity:.55}
+.search input{flex:1;min-width:0;background:0;border:0;outline:0;color:#fff;
+  font:inherit;font-size:16px;padding:11px 0}
+.search input::placeholder{color:#8a8792}
+.search button{background:0;border:0;color:#8a8792;font-size:22px;line-height:1;
+  padding:0 2px;cursor:pointer;display:none}
+.search.has button{display:block}
+#res{max-width:680px;margin:0 auto;background:#fff;border-radius:0 0 12px 12px;
+  max-height:min(58vh,440px);overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
+#res.on{display:block}
+#res a{display:block;padding:12px 16px;border-bottom:1px solid var(--linia);
+  text-decoration:none;color:var(--tinta)}
+#res a:last-child{border-bottom:0}
+#res a:active{background:var(--vermell-clar)}
+#res .rn{font-weight:700;font-size:.93rem}
+#res .rd{color:var(--gris);font-size:.8rem}
+#res .rt{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--vermell);float:right;padding-left:8px}
+#res .empty{padding:18px 16px;color:var(--gris);font-size:.88rem}
+
+/* ---------- Navegació inferior (mòbil) ---------- */
+nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:45;background:#fff;
+  border-top:1px solid var(--linia);display:flex;
+  padding-bottom:env(safe-area-inset-bottom);
+  box-shadow:0 -2px 14px rgba(17,16,19,.07)}
+nav.tabs a{flex:1;padding:8px 2px 7px;text-align:center;text-decoration:none;
+  color:var(--gris);font-size:.63rem;font-weight:700}
+nav.tabs a svg{display:block;margin:0 auto 3px;width:21px;height:21px}
+nav.tabs a.on{color:var(--vermell)}
+
+/* ---------- Seccions ---------- */
+main{max-width:680px;margin:0 auto;padding:0 16px}
+section{padding:26px 0 4px;scroll-margin-top:60px}
+section h2{font-size:1.25rem;display:flex;align-items:center;gap:9px}
+section h2::before{content:"";width:5px;height:20px;border-radius:3px;
+  background:var(--vermell);flex:0 0 auto}
+section .sub{color:var(--gris);font-size:.88rem;margin:7px 0 16px}
+
+/* ---------- Fitxes ---------- */
+.item{background:#fff;border:1px solid var(--linia);border-radius:var(--r);
+  box-shadow:var(--ombra);padding:15px;margin-bottom:11px}
+.item h3{font-size:1.02rem;margin:5px 0 5px}
+.pill{display:inline-block;background:var(--vermell-clar);color:var(--vermell-fosc);
+  font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;
+  padding:3px 8px;border-radius:999px}
+.meta{color:var(--gris);font-size:.83rem;margin:0}
+.desc{font-size:.87rem;color:#3b3941;margin:7px 0 0}
+.warn{font-size:.8rem;color:#8a5a00;background:#fff8e6;border-radius:8px;
+  padding:7px 10px;margin:9px 0 0}
+.item-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.btn{flex:1 1 auto;min-height:42px;display:inline-flex;align-items:center;
+  justify-content:center;gap:6px;padding:0 15px;border-radius:10px;
+  border:1px solid var(--linia);background:#fff;color:var(--tinta);
+  font-size:.86rem;font-weight:700;text-decoration:none}
+.btn:active{transform:scale(.97)}
+.btn.primary{background:var(--vermell);border-color:var(--vermell);color:#fff}
+.btn.ghost{background:var(--negre);border-color:var(--negre);color:#fff}
+
+/* ---------- Filtres ---------- */
+.filters{display:flex;gap:7px;overflow-x:auto;padding:2px 0 12px;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;font:inherit;font-size:.8rem;font-weight:700;cursor:pointer;
+  padding:8px 13px;border-radius:999px;border:1px solid var(--linia);
+  background:#fff;color:var(--gris);white-space:nowrap}
+.chip .n{opacity:.6;font-weight:600}
+.chip[aria-pressed="true"]{background:var(--negre);border-color:var(--negre);color:#fff}
+.chip[aria-pressed="true"] .n{opacity:.75;color:#ff9aa8}
+
+/* ---------- Avís ---------- */
+.notice{background:#fff;border:1px solid var(--linia);border-left:5px solid var(--vermell);
+  border-radius:var(--r);padding:15px;box-shadow:var(--ombra)}
+.notice h3{font-size:.98rem;margin-bottom:7px}
+.notice p{margin:6px 0 0;font-size:.88rem;color:#3b3941}
+.notice ul{margin:8px 0 0;padding-left:20px;font-size:.87rem;color:#3b3941}
+.slots{list-style:none;padding:0;margin:14px 0 0}
+.slots li{display:flex;gap:13px;padding:11px 0;border-bottom:1px solid var(--linia);
+  font-size:.88rem;align-items:baseline}
+.slots li:last-child{border-bottom:0}
+.slots time{flex:0 0 62px;font-weight:800;color:var(--negre);font-variant-numeric:tabular-nums}
+
+/* ---------- Camp de joc ---------- */
+.kv{list-style:none;padding:0;margin:10px 0 0}
+.kv li{padding:9px 0;border-bottom:1px solid var(--linia);font-size:.88rem}
+.kv li:last-child{border-bottom:0}
+.kv b{display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--gris);margin-bottom:2px}
+.photo{margin:13px 0 0;border:1px solid var(--linia);border-radius:var(--r);
+  overflow:hidden;background:#fff;box-shadow:var(--ombra)}
+.photo img{width:100%;height:auto;display:block}
+.photo figcaption{padding:9px 13px;font-size:.78rem;color:var(--gris);
+  border-top:1px solid var(--linia)}
+
+footer{background:var(--negre);color:#a7a4ae;margin-top:34px;padding:24px 16px 30px;
+  font-size:.83rem;border-top:3px solid var(--vermell)}
+footer .fi{max-width:680px;margin:0 auto}
+footer .fl{display:flex;gap:16px;align-items:center;background:#fff;
+  border-radius:10px;padding:9px 12px;margin-bottom:14px;width:fit-content}
+footer .fl img{height:28px;width:auto}
+
+@media (min-width:620px){
+  .facts{grid-template-columns:repeat(3,1fr)}
+  .facts .full{grid-column:auto}
+  .item{display:flex;gap:18px;align-items:flex-start}
+  .item-body{flex:1}
+  .item-actions{margin-top:0;flex:0 0 200px;flex-direction:column}
+  .btn{flex:0 0 auto}
+}
+@media (min-width:900px){
+  .hwrap,.search .in,#res,main,footer .fi{max-width:940px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:11px;align-items:start}
+  .grid2 .item{margin-bottom:0}
+  nav.tabs a{font-size:.72rem}
+  body{padding-bottom:78px}
+}
+@media print{
+  nav.tabs,.search{display:none} body{padding-bottom:0}
+  .item{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div id="portada">
+  <img class="logo" src="img/openday-logo.png" alt="Open Day 2027">
+  <p class="pt">Mini Masculí i Femení Interterritorial</p>
+  <p class="pd">Campionat de Catalunya · CB Torelló</p>
+  <p class="pc">Dissabte 16 de gener de 2027 · Zona Esportiva Municipal</p>
+  <button class="entrar" id="entrar">Entrar a la web
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <div class="pl">
+    <img src="img/cbt-negre.png" alt="Club Bàsquet Torelló">
+    <img src="img/ajt-negre.png" alt="Ajuntament de Torelló">
+    <img class="f" src="img/fcbq.png" alt="Federació Catalana de Bàsquet">
+  </div>
+</div>
+
+<header>
+  <div class="hwrap">
+    <div class="logos">
+      <img src="img/cbt-negre.png" alt="Club Bàsquet Torelló">
+      <img src="img/ajt-negre.png" alt="Ajuntament de Torelló">
+      <img class="fbq" src="img/fcbq.png" alt="Federació Catalana de Bàsquet">
+    </div>
+    <p class="kicker">Mini Masculí i Femení Interterritorial</p>
+    <h1>Open Day 2027</h1>
+    <p class="sub2">Campionat de Catalunya</p>
+    <p class="lead">Tota la informació de la jornada: horaris, com arribar-hi, on menjar
+      i què veure a Torelló.</p>
+    <div class="facts">
+      <div class="full"><b>Dissabte 16 de gener de 2027</b>Data de la competició</div>
+      <div><b>Pavelló Municipal i Sala Polivalent</b>Zona Esportiva Municipal</div>
+      <div><b>Mini Interterritorial</b>Masculí i femení</div>
+    </div>
+  </div>
+</header>
+
+<div class="search" id="sb">
+  <div class="in">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" aria-hidden="true">
+      <circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    <input id="q" type="search" inputmode="search" autocomplete="off"
+      placeholder="Cercar restaurant, museu, adreça…" aria-label="Cercar">
+    <button id="clr" aria-label="Esborrar">&times;</button>
+  </div>
+  <div id="res" role="listbox" aria-label="Resultats"></div>
+</div>
+
+<main>
+
+<section id="horaris">
+  <h2>Horaris</h2>
+  <p class="sub">Programa del dissabte 16 de gener de 2027.</p>
+  <div class="notice">
+    <h3>Pendents de la FCBQ</h3>
+    <p>Els horaris definitius els facilita la Federació Catalana de Bàsquet. Aquesta secció
+      s'omplirà amb l'hora, la pista i l'aparellament de cada partit tan bon punt els rebem.</p>
+    <ul>
+      <li>Mini masculí — per confirmar</li>
+      <li>Mini femení — per confirmar</li>
+      <li>Repartiment entre Pavelló i Sala Polivalent — per confirmar</li>
+    </ul>
+  </div>
+  <ol class="slots">
+    <li><time>--:--</time><span>Obertura de portes i acreditacions</span></li>
+    <li><time>--:--</time><span>Inici de la competició</span></li>
+    <li><time>--:--</time><span>Partits mini masculí</span></li>
+    <li><time>--:--</time><span>Partits mini femení</span></li>
+    <li><time>--:--</time><span>Cloenda i lliurament de trofeus</span></li>
+  </ol>
+</section>
+
+<section id="camp">
+  <h2>Camp de joc</h2>
+  <p class="sub">L'Open Day es juga en <b>dues instal·lacions</b> de la zona esportiva municipal de Torelló, a tocar l'una de l'altra.</p>
+  <article class="item">
+    <div class="item-body">
+      <span class="pill">Coberta blava</span>
+      <h3>Pavelló Municipal de Torelló</h3>
+      <ul class="kv">
+        <li><b>Adreça</b>Passatge dels Esports, s/n · 08570 Torelló (Osona)</li>
+        <li><b>Pista</b>Pista poliesportiva coberta, amb gimnàs, pista d'esquaix i zona de búlder</li>
+        <li><b>Com arribar-hi</b>C-17 (sortida Torelló Nord) o C-25 amb connexió a la C-17 a Vic</li>
+      </ul>
+    </div>
+    <div class="item-actions">
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Pavell%C3%B3+Municipal+de+Torell%C3%B3%2C+Passatge+dels+Esports+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+      <a class="btn" href="tel:+34938593200">Trucar</a>
+    </div>
+  </article>
+  <article class="item">
+    <div class="item-body">
+      <span class="pill">Coberta verda</span>
+      <h3>Sala Polivalent</h3>
+      <ul class="kv">
+        <li><b>Adreça</b>Zona Esportiva Municipal · Passatge dels Esports, s/n · 08570 Torelló</li>
+        <li><b>Pista</b>Espai polivalent cobert, a la mateixa zona esportiva que el Pavelló</li>
+        <li><b>Com arribar-hi</b>Accés pel mateix recinte; als aparcaments de la zona esportiva</li>
+      </ul>
+    </div>
+    <div class="item-actions">
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Zona+Esportiva+Municipal+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+      <a class="btn" href="tel:+34938593200">Trucar</a>
+    </div>
+  </article>
+  <p class="muted" style="margin:0 0 13px">Els partits es reparteixen entre les dues instal·lacions. Ambdues són dins la Zona Esportiva Municipal, a tocar l'una de l'altra — <a href="https://equipamentstorello.cat/" target="_blank" rel="noopener">informació d'equipaments esportius</a>.</p>
+  <figure class="photo">
+    <img src="img/instalacions.jpg" alt="Vista aèria de la zona esportiva municipal de Torelló, amb el Pavelló Municipal" loading="lazy" width="1600" height="1200">
+    <figcaption>Zona esportiva municipal de Torelló.<br><b>Coberta blava:</b> Pavelló Municipal.<br><b>Coberta verda:</b> Sala Polivalent.<br>L'Open Day es juga a les <b>dues</b> instal·lacions.</figcaption>
+  </figure>
+</section>
+
+<section id="restaurants">
+  <h2>Restaurants de Torelló</h2>
+  <p class="sub">17 establiments a pocs minuts del pavelló. Toca «Trucar» per telefonar directament.</p>
+  <div class="filters">
+    <button class="chip" data-filter="all" aria-pressed="true">Tots <span class="n">17</span></button>
+    <button class="chip" data-filter="Cuina catalana, de mercat i creativa">Cuina catalana <span class="n">6</span></button><button class="chip" data-filter="Tapes i platillos per compartir">Tapes <span class="n">4</span></button><button class="chip" data-filter="Menú diari i cuina casolana">Menú diari <span class="n">4</span></button><button class="chip" data-filter="Pizzes, entrepans i menjar per emportar">Pizzes i emportar <span class="n">3</span></button>
+  </div>
+  <div id="restlist"><article class="item rest" data-cat="Cuina catalana, de mercat i creativa">
+  <div class="item-body">
+    <span class="pill">Cuina catalana</span>
+    <h3>Restaurant A Lloc</h3>
+    <p class="meta">Av. del Castell, 18 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34628383481">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Restaurant+A+Lloc%2C+Av.+del+Castell%2C+18%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="https://algracatering.com/a-lloc/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item rest" data-cat="Cuina catalana, de mercat i creativa">
+  <div class="item-body">
+    <span class="pill">Cuina catalana</span>
+    <h3>Cal Pagès</h3>
+    <p class="meta">C/ Ges d&#x27;Avall, 4 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938595192">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Cal+Pag%C3%A8s%2C+C%2F+Ges+d%27Avall%2C+4%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="https://www.instagram.com/restaurantcalpages/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item rest" data-cat="Cuina catalana, de mercat i creativa">
+  <div class="item-body">
+    <span class="pill">Cuina catalana</span>
+    <h3>L&#x27;Olla (dels Experiments)</h3>
+    <p class="meta">C/ Ges d&#x27;Avall, 36 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34638959857">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=L%27Olla+%28dels+Experiments%29%2C+C%2F+Ges+d%27Avall%2C+36%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item rest" data-cat="Cuina catalana, de mercat i creativa">
+  <div class="item-body">
+    <span class="pill">Cuina catalana</span>
+    <h3>El Bistrot del Firal</h3>
+    <p class="meta">Pl. Sant Fortià, 2 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938594383">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=El+Bistrot+del+Firal%2C+Pl.+Sant+Forti%C3%A0%2C+2%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="http://www.elbistrotdelfiral.cat/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item rest" data-cat="Cuina catalana, de mercat i creativa">
+  <div class="item-body">
+    <span class="pill">Cuina catalana</span>
+    <h3>Restaurant Tse Tse</h3>
+    <p class="meta">Pl. Vella, 3 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34639574952">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Restaurant+Tse+Tse%2C+Pl.+Vella%2C+3%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="https://tse-tse.vercel.app/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item rest" data-cat="Cuina catalana, de mercat i creativa">
+  <div class="item-body">
+    <span class="pill">Cuina catalana</span>
+    <h3>Fonda de Vila-seca</h3>
+    <p class="meta">C/ de Vila-Seca, 12 · 08571 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938591125">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Fonda+de+Vila-seca%2C+C%2F+de+Vila-Seca%2C+12%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item rest" data-cat="Tapes i platillos per compartir">
+  <div class="item-body">
+    <span class="pill">Tapes</span>
+    <h3>La Gola del Llop</h3>
+    <p class="meta">C/ del Collsacabra, 34 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34633413856">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=La+Gola+del+Llop%2C+C%2F+del+Collsacabra%2C+34%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item rest" data-cat="Tapes i platillos per compartir">
+  <div class="item-body">
+    <span class="pill">Tapes</span>
+    <h3>L&#x27;Engruna d&#x27;en Pousa</h3>
+    <p class="meta">C/ Can Casarramona, 26 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938592147">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=L%27Engruna+d%27en+Pousa%2C+C%2F+Can+Casarramona%2C+26%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item rest" data-cat="Tapes i platillos per compartir">
+  <div class="item-body">
+    <span class="pill">Tapes</span>
+    <h3>Cal Nan</h3>
+    <p class="meta">C/ d&#x27;Enric Prat de la Riba, 7 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34621500320">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Cal+Nan%2C+C%2F+d%27Enric+Prat+de+la+Riba%2C+7%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item rest" data-cat="Tapes i platillos per compartir">
+  <div class="item-body">
+    <span class="pill">Tapes</span>
+    <h3>DeSig</h3>
+    <p class="meta">Pl. de la Vila, 2 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34931314898">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=DeSig%2C+Pl.+de+la+Vila%2C+2%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="https://www.instagram.com/desig_torello/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item rest" data-cat="Menú diari i cuina casolana">
+  <div class="item-body">
+    <span class="pill">Menú diari</span>
+    <h3>El Triangle</h3>
+    <p class="meta">C/ del Ter, 200 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938593731">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=El+Triangle%2C+C%2F+del+Ter%2C+200%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="http://www.eltriangle.net/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item rest" data-cat="Menú diari i cuina casolana">
+  <div class="item-body">
+    <span class="pill">Menú diari</span>
+    <h3>Cafeteria-Rest. La Pèrgola</h3>
+    <p class="meta">C/ d&#x27;Enric Prat de la Riba, 7 (Mercat) · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938595282">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Cafeteria-Rest.+La+P%C3%A8rgola%2C+C%2F+d%27Enric+Prat+de+la+Riba%2C+7+%28Mercat%29%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item rest" data-cat="Menú diari i cuina casolana">
+  <div class="item-body">
+    <span class="pill">Menú diari</span>
+    <h3>Rest.-Cafeteria l&#x27;Estació</h3>
+    <p class="meta">Pl. de l&#x27;Estació, 4 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938596372">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Rest.-Cafeteria+l%27Estaci%C3%B3%2C+Pl.+de+l%27Estaci%C3%B3%2C+4%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item rest" data-cat="Menú diari i cuina casolana">
+  <div class="item-body">
+    <span class="pill">Menú diari</span>
+    <h3>Bar Restaurante Tornem-hi</h3>
+    <p class="meta">C/ Girona, 33 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938594544">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Bar+Restaurante+Tornem-hi%2C+C%2F+Girona%2C+33%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item rest" data-cat="Pizzes, entrepans i menjar per emportar">
+  <div class="item-body">
+    <span class="pill">Pizzes i emportar</span>
+    <h3>El Gat</h3>
+    <p class="meta">C/ dels Estudis, 13 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938592601">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=El+Gat%2C+C%2F+dels+Estudis%2C+13%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="https://www.instagram.com/frankfurtelgat" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item rest" data-cat="Pizzes, entrepans i menjar per emportar">
+  <div class="item-body">
+    <span class="pill">Pizzes i emportar</span>
+    <h3>Pizzeria Can Zeppelins</h3>
+    <p class="meta">Pl. Vella, 10 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938504783">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Pizzeria+Can+Zeppelins%2C+Pl.+Vella%2C+10%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="https://www.canzeppelins.com/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item rest" data-cat="Pizzes, entrepans i menjar per emportar">
+  <div class="item-body">
+    <span class="pill">Pizzes i emportar</span>
+    <h3>Cal Teuler (per emportar)</h3>
+    <p class="meta">Pl. Sant Fortià, 1 · 08570 Torelló</p>
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938591175">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Cal+Teuler+%28per+emportar%29%2C+Pl.+Sant+Forti%C3%A0%2C+1%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn ghost" href="https://www.calteuler.cat/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article></div>
+</section>
+
+<section id="cultura">
+  <h2>Cultura i patrimoni</h2>
+  <p class="sub">Què visitar si acompanyeu l'equip tot el cap de setmana.</p>
+  <div class="grid2"><article class="item">
+  <div class="item-body">
+    <span class="pill">Museu</span>
+    <h3>Museu de la Torneria de la Vall del Ges</h3>
+    <p class="meta">C. de la Pau, 14</p>
+    <p class="desc">Seu a l&#x27;antiga Torneria Mecànica Vidal (1898-1901). Explica la industrialització de Catalunya a partir de l&#x27;ofici del torner de fusta i banya.</p>
+    
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938596476">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Museu+de+la+Torneria+de+la+Vall+del+Ges%2C+C.+de+la+Pau%2C+14%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    <a class="btn" href="https://www.museudelatorneria.cat/" target="_blank" rel="noopener">Web</a>
+  </div>
+</article><article class="item">
+  <div class="item-body">
+    <span class="pill">Patrimoni</span>
+    <h3>Església de Sant Feliu</h3>
+    <p class="meta">Centre de la vila</p>
+    <p class="desc">Documentada des del 881; l&#x27;edifici actual és del 1672, amb dues torretes i un esvelt campanar.</p>
+    
+  </div>
+  <div class="item-actions">
+    
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Esgl%C3%A9sia+de+Sant+Feliu%2C+Centre+de+la+vila%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item">
+  <div class="item-body">
+    <span class="pill">Patrimoni</span>
+    <h3>Santuari de Rocaprevera</h3>
+    <p class="meta">Puig de les Tres Creus</p>
+    <p class="desc">Esmentat des del 1402; l&#x27;edifici actual (1924) és obra de Josep M. Pericas. Passeig amb arbres i dues fonts, i vistes de 360° des del Puig de les Tres Creus.</p>
+    
+  </div>
+  <div class="item-actions">
+    <a class="btn primary" href="tel:+34938590637">Trucar</a>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Santuari+de+Rocaprevera%2C+Puig+de+les+Tres+Creus%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article><article class="item">
+  <div class="item-body">
+    <span class="pill">Passeig</span>
+    <h3>Nucli antic i Plaça de la Vila</h3>
+    <p class="meta">Pl. de la Vila</p>
+    <p class="desc">Plaça porticada, carrer Nou (segle XV, antic camí ral de Vic) i els carrers dels Arcs, de Capsavila i de Sant Feliu.</p>
+    
+  </div>
+  <div class="item-actions">
+    
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Nucli+antic+i+Pla%C3%A7a+de+la+Vila%2C+Pl.+de+la+Vila%2C+Torell%C3%B3" target="_blank" rel="noopener">Mapa</a>
+    
+  </div>
+</article></div>
+</section>
+
+<section id="comerc">
+  <h2>Comerç local</h2>
+  <p class="sub">Els comerços de la vila col·laboradors de l'Open Day.</p>
+  <div class="notice">
+    <h3>Pendent de dades</h3>
+    <p>Encara no tenim la llista de comerços. Quan la rebem, cada targeta es convertirà en
+      una fitxa amb nom, especialitat, adreça i telèfon, amb el botó de trucada inclòs.</p>
+  </div>
+  <div class="grid2" style="margin-top:13px"><article class="item"><div class="item-body"><h3>Alimentació i fleques</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Roba i calçat</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Esports</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Farmàcies i salut</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Papereria i regals</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Ferreteria i llar</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Barberia i estètica</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Fotografia</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Floristeria</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Restauració i cafeteries</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Serveis i gestoria</h3><p class="meta">Dades pendents</p></div></article><article class="item"><div class="item-body"><h3>Perruqueria</h3><p class="meta">Dades pendents</p></div></article></div>
+</section>
+
+<section id="contacte">
+  <h2>Contacte</h2>
+  <p class="sub">Organitza el Club Bàsquet Torelló amb el suport de l'Ajuntament,
+    sota l'empara de la Federació Catalana de Bàsquet.</p>
+  <article class="item">
+    <div class="item-body">
+      <h3>Club Bàsquet Torelló</h3>
+      <p class="meta">Organització</p>
+      <p class="desc">Club fundat el 1965. Coordina la jornada, les inscripcions i l'acollida dels equips.</p>
+    </div>
+  </article>
+  <article class="item">
+    <div class="item-body">
+      <h3>Ajuntament de Torelló</h3>
+      <p class="meta">Col·laborador</p>
+      <p class="desc">Cedeix les instal·lacions municipals i dona suport a l'esdeveniment.</p>
+    </div>
+    <div class="item-actions">
+      <a class="btn" href="https://torello.cat/" target="_blank" rel="noopener">torello.cat</a>
+    </div>
+  </article>
+  <article class="item">
+    <div class="item-body">
+      <h3>Federació Catalana de Bàsquet</h3>
+      <p class="meta">Competició oficial</p>
+      <p class="desc">Regula el campionat i facilita els horaris i els aparellaments.</p>
+    </div>
+    <div class="item-actions">
+      <a class="btn" href="https://www.basquetcatala.cat/" target="_blank" rel="noopener">basquetcatala.cat</a>
+    </div>
+  </article>
+</section>
+
+</main>
+
+<nav class="tabs" id="nav">
+  <a href="#horaris" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Horaris</a>
+  <a href="#camp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Camp</a>
+  <a href="#restaurants"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3v8a2 2 0 0 0 4 0V3M8 11v10M17 3c-1.5 1-2 3-2 5s.5 3 2 3v10"/></svg>Menjar</a>
+  <a href="#cultura"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10l9-6 9 6M5 10v9h14v-9M10 19v-5h4v5"/></svg>Cultura</a>
+  <a href="#comerc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h16l-1.5 12h-13zM9 8V6a3 3 0 0 1 6 0v2"/></svg>Comerç</a>
+</nav>
+
+<footer>
+  <div class="fi">
+    <div class="fl">
+      <img src="img/cbt-negre.png" alt="Club Bàsquet Torelló">
+      <img src="img/ajt-negre.png" alt="Ajuntament de Torelló">
+      <img src="img/fcbq.png" alt="Federació Catalana de Bàsquet">
+    </div>
+    <p style="color:#fff;font-weight:700;font-size:1rem">Open Day 2027 · Campionat de Catalunya<br>
+      <span style="color:#a7a4ae;font-weight:400;font-size:.9rem">Mini Masculí i Femení Interterritorial ·
+      Dissabte 16 de gener de 2027 · Zona Esportiva Municipal de Torelló.</span></p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Portada ---------- */
+(function(){
+  var p = document.getElementById('portada'), b = document.getElementById('entrar');
+  function obre(){
+    p.className = 'amagat';
+    try { sessionStorage.setItem('od2027','1'); } catch(e){}
+    window.scrollTo(0,0);
+  }
+  b.addEventListener('click', obre);
+  // qui ja hi ha entrat en aquesta sessio, no la torna a veure
+  try { if(sessionStorage.getItem('od2027')==='1') p.className='amagat'; } catch(e){}
+})();
+
+/* ---------- Cercador instantani ---------- */
+(function(){
+  var D = [{"n": "Restaurant A Lloc", "t": "restaurant", "c": "Cuina catalana", "d": "Av. del Castell, 18, 08570 Torelló", "tel": "628383481", "u": "https://algracatering.com/a-lloc/", "m": "https://www.google.com/maps/search/?api=1&query=Restaurant+A+Lloc%2C+Av.+del+Castell%2C+18%2C+Torell%C3%B3"}, {"n": "Cal Pagès", "t": "restaurant", "c": "Cuina catalana", "d": "C/ Ges d'Avall, 4, 08570 Torelló", "tel": "938595192", "u": "https://www.instagram.com/restaurantcalpages/", "m": "https://www.google.com/maps/search/?api=1&query=Cal+Pag%C3%A8s%2C+C%2F+Ges+d%27Avall%2C+4%2C+Torell%C3%B3"}, {"n": "L'Olla (dels Experiments)", "t": "restaurant", "c": "Cuina catalana", "d": "C/ Ges d'Avall, 36, 08570 Torelló", "tel": "638959857", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=L%27Olla+%28dels+Experiments%29%2C+C%2F+Ges+d%27Avall%2C+36%2C+Torell%C3%B3"}, {"n": "El Bistrot del Firal", "t": "restaurant", "c": "Cuina catalana", "d": "Pl. Sant Fortià, 2, 08570 Torelló", "tel": "938594383", "u": "http://www.elbistrotdelfiral.cat/", "m": "https://www.google.com/maps/search/?api=1&query=El+Bistrot+del+Firal%2C+Pl.+Sant+Forti%C3%A0%2C+2%2C+Torell%C3%B3"}, {"n": "Restaurant Tse Tse", "t": "restaurant", "c": "Cuina catalana", "d": "Pl. Vella, 3, 08570 Torelló", "tel": "639574952", "u": "https://tse-tse.vercel.app/", "m": "https://www.google.com/maps/search/?api=1&query=Restaurant+Tse+Tse%2C+Pl.+Vella%2C+3%2C+Torell%C3%B3"}, {"n": "Fonda de Vila-seca", "t": "restaurant", "c": "Cuina catalana", "d": "C/ de Vila-Seca, 12, 08571 Torelló", "tel": "938591125", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=Fonda+de+Vila-seca%2C+C%2F+de+Vila-Seca%2C+12%2C+Torell%C3%B3"}, {"n": "La Gola del Llop", "t": "restaurant", "c": "Tapes", "d": "C/ del Collsacabra, 34, 08570 Torelló", "tel": "633413856", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=La+Gola+del+Llop%2C+C%2F+del+Collsacabra%2C+34%2C+Torell%C3%B3"}, {"n": "L'Engruna d'en Pousa", "t": "restaurant", "c": "Tapes", "d": "C/ Can Casarramona, 26, 08570 Torelló", "tel": "938592147", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=L%27Engruna+d%27en+Pousa%2C+C%2F+Can+Casarramona%2C+26%2C+Torell%C3%B3"}, {"n": "Cal Nan", "t": "restaurant", "c": "Tapes", "d": "C/ d'Enric Prat de la Riba, 7, 08570 Torelló", "tel": "621500320", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=Cal+Nan%2C+C%2F+d%27Enric+Prat+de+la+Riba%2C+7%2C+Torell%C3%B3"}, {"n": "DeSig", "t": "restaurant", "c": "Tapes", "d": "Pl. de la Vila, 2, 08570 Torelló", "tel": "931314898", "u": "https://www.instagram.com/desig_torello/", "m": "https://www.google.com/maps/search/?api=1&query=DeSig%2C+Pl.+de+la+Vila%2C+2%2C+Torell%C3%B3"}, {"n": "El Triangle", "t": "restaurant", "c": "Menú diari", "d": "C/ del Ter, 200, 08570 Torelló", "tel": "938593731", "u": "http://www.eltriangle.net/", "m": "https://www.google.com/maps/search/?api=1&query=El+Triangle%2C+C%2F+del+Ter%2C+200%2C+Torell%C3%B3"}, {"n": "Cafeteria-Rest. La Pèrgola", "t": "restaurant", "c": "Menú diari", "d": "C/ d'Enric Prat de la Riba, 7 (Mercat), 08570 Torelló", "tel": "938595282", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=Cafeteria-Rest.+La+P%C3%A8rgola%2C+C%2F+d%27Enric+Prat+de+la+Riba%2C+7+%28Mercat%29%2C+Torell%C3%B3"}, {"n": "Rest.-Cafeteria l'Estació", "t": "restaurant", "c": "Menú diari", "d": "Pl. de l'Estació, 4, 08570 Torelló", "tel": "938596372", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=Rest.-Cafeteria+l%27Estaci%C3%B3%2C+Pl.+de+l%27Estaci%C3%B3%2C+4%2C+Torell%C3%B3"}, {"n": "Bar Restaurante Tornem-hi", "t": "restaurant", "c": "Menú diari", "d": "C/ Girona, 33, 08570 Torelló", "tel": "938594544", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=Bar+Restaurante+Tornem-hi%2C+C%2F+Girona%2C+33%2C+Torell%C3%B3"}, {"n": "El Gat", "t": "restaurant", "c": "Pizzes i emportar", "d": "C/ dels Estudis, 13, 08570 Torelló", "tel": "938592601", "u": "https://www.instagram.com/frankfurtelgat", "m": "https://www.google.com/maps/search/?api=1&query=El+Gat%2C+C%2F+dels+Estudis%2C+13%2C+Torell%C3%B3"}, {"n": "Pizzeria Can Zeppelins", "t": "restaurant", "c": "Pizzes i emportar", "d": "Pl. Vella, 10, 08570 Torelló", "tel": "938504783", "u": "https://www.canzeppelins.com/", "m": "https://www.google.com/maps/search/?api=1&query=Pizzeria+Can+Zeppelins%2C+Pl.+Vella%2C+10%2C+Torell%C3%B3"}, {"n": "Cal Teuler (per emportar)", "t": "restaurant", "c": "Pizzes i emportar", "d": "Pl. Sant Fortià, 1, 08570 Torelló", "tel": "938591175", "u": "https://www.calteuler.cat/", "m": "https://www.google.com/maps/search/?api=1&query=Cal+Teuler+%28per+emportar%29%2C+Pl.+Sant+Forti%C3%A0%2C+1%2C+Torell%C3%B3"}, {"n": "Museu de la Torneria de la Vall del Ges", "t": "cultura", "c": "Museu", "d": "C. de la Pau, 14", "tel": "938596476", "u": "https://www.museudelatorneria.cat/", "m": "https://www.google.com/maps/search/?api=1&query=Museu+de+la+Torneria+de+la+Vall+del+Ges%2C+C.+de+la+Pau%2C+14%2C+Torell%C3%B3", "x": "Seu a l'antiga Torneria Mecànica Vidal (1898-1901). Explica la industrialització de Catalunya a partir de l'ofici del torner de fusta i banya.", "a": ""}, {"n": "Església de Sant Feliu", "t": "cultura", "c": "Patrimoni", "d": "Centre de la vila", "tel": "", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=Esgl%C3%A9sia+de+Sant+Feliu%2C+Centre+de+la+vila%2C+Torell%C3%B3", "x": "Documentada des del 881; l'edifici actual és del 1672, amb dues torretes i un esvelt campanar.", "a": ""}, {"n": "Santuari de Rocaprevera", "t": "cultura", "c": "Patrimoni", "d": "Puig de les Tres Creus", "tel": "938590637", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=Santuari+de+Rocaprevera%2C+Puig+de+les+Tres+Creus%2C+Torell%C3%B3", "x": "Esmentat des del 1402; l'edifici actual (1924) és obra de Josep M. Pericas. Passeig amb arbres i dues fonts, i vistes de 360° des del Puig de les Tres Creus.", "a": ""}, {"n": "Nucli antic i Plaça de la Vila", "t": "cultura", "c": "Passeig", "d": "Pl. de la Vila", "tel": "", "u": "", "m": "https://www.google.com/maps/search/?api=1&query=Nucli+antic+i+Pla%C3%A7a+de+la+Vila%2C+Pl.+de+la+Vila%2C+Torell%C3%B3", "x": "Plaça porticada, carrer Nou (segle XV, antic camí ral de Vic) i els carrers dels Arcs, de Capsavila i de Sant Feliu.", "a": ""}];
+  var q = document.getElementById('q'), res = document.getElementById('res'),
+      sb = document.getElementById('sb'), clr = document.getElementById('clr');
+  function norm(s){
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ');
+  }
+  var IDX = D.map(function(o){
+    return {o:o, k:norm(o.n+' '+(o.c||'')+' '+(o.d||'')+' '+(o.x||''))};
+  });
+  function render(list){
+    if(!q.value.trim()){ res.className=''; res.innerHTML=''; sb.className='search'; return; }
+    sb.className='search has';
+    if(!list.length){ res.className='on';
+      res.innerHTML='<div class="empty">Cap resultat. Prova amb un altre nom.</div>'; return; }
+    var h='';
+    for(var i=0;i<list.length && i<12;i++){
+      var o=list[i].o;
+      h+='<a href="'+(o.m||'#')+'" target="_blank" rel="noopener">'+
+         '<span class="rt">'+(o.t==='cultura'?'Cultura':'Menjar')+'</span>'+
+         '<span class="rn">'+o.n+'</span><br><span class="rd">'+(o.c||'')+' · '+(o.d||'')+'</span></a>';
+    }
+    res.className='on'; res.innerHTML=h;
+  }
+  var t;
+  q.addEventListener('input', function(){
+    clearTimeout(t);
+    t=setTimeout(function(){
+      var terms = norm(q.value).trim().split(/\s+/).filter(Boolean);
+      var out = IDX.filter(function(x){
+        for(var i=0;i<terms.length;i++) if(x.k.indexOf(terms[i])<0) return false;
+        return true;
+      });
+      render(out);
+    }, 90);
+  });
+  clr.addEventListener('click', function(){ q.value=''; render([]); q.focus(); });
+  document.addEventListener('click', function(e){
+    if(!sb.contains(e.target)){ res.className=''; }
+  });
+})();
+
+/* ---------- Filtres de restaurants ---------- */
+(function(){
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var items=[].slice.call(document.querySelectorAll('#restlist .rest'));
+  chips.forEach(function(ch){
+    ch.addEventListener('click', function(){
+      chips.forEach(function(c){ c.setAttribute('aria-pressed', c===ch); });
+      var f=ch.dataset.filter;
+      items.forEach(function(it){
+        it.style.display = (f==='all' || it.dataset.cat===f) ? '' : 'none';
+      });
+    });
+  });
+})();
+
+/* ---------- Ressaltar la pestanya activa ---------- */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('nav.tabs a'));
+  var secs=links.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      var i=secs.indexOf(e.target); if(i<0) return;
+      links.forEach(function(l,j){ l.className = (j===i?'on':''); });
+    });
+  },{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){ if(s) io.observe(s); });
+})();
+</script>
+</body>
+</html>
